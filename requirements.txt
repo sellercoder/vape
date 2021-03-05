@@ -1,0 +1,5 @@
+flask
+Flask-WTF
+orator
+environs~=8.0.0
+
