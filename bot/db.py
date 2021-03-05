@@ -2,7 +2,7 @@ from orator import DatabaseManager, Schema, Model
 config = {
     'sqlite3': {
         'driver': 'sqlite',
-        'database': '../bot.db',
+        'database': '/root/bot.db',
     }
 }
 
