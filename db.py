@@ -2,7 +2,7 @@ from orator import DatabaseManager, Schema, Model
 config = {
     'sqlite3': {
         'driver': 'sqlite',
-        'database': '/root/bot.db',
+        'database': '../bot.db',
     }
 }
 
@@ -11,17 +11,16 @@ schema = Schema(db)
 Model.set_connection_resolver(db)
 
 class User(Model):
-	__guarded__ = ['created_at', 'updated_at']
+	__timestamps__ = False
 
 class Category(Model):
-	__guarded__ = ['created_at', 'updated_at']
+	__timestamps__ = False
 
 class Good(Model):
-	__guarded__ = ['created_at', 'updated_at']
+	__timestamps__ = False
 
 class Picture(Model):
-	__guarded__ = ['created_at', 'updated_at']
-
+	__timestamps__ = False
 
 
 
