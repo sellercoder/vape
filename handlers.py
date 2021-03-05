@@ -10,16 +10,17 @@ from db import *
 
 from loader import dp, bot
 
+
 def root_categories():
 	markup = InlineKeyboardMarkup(row_width=3)
-	for category in Category.all():
-		markup.insert(InlineKeyboardButton(text=f"{category.undercategory}",callback_data=f"cat"))
+	for item in Category.all():
+		markup.insert(InlineKeyboardButton(text=f"{item.undercategory}",callback_data=f"item"))
 	return markup
 
 
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
-	await message.answer("Категории",reply_markup=root_categories())
+	await message.answer("----",reply_markup=root_categories())
 
 
 

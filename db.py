@@ -10,7 +10,6 @@ db = DatabaseManager(config)
 schema = Schema(db)
 Model.set_connection_resolver(db)
 
-
 class User(Model):
 	__guarded__ = ['created_at', 'updated_at']
 
@@ -22,4 +21,16 @@ class Good(Model):
 
 class Picture(Model):
 	__guarded__ = ['created_at', 'updated_at']
+
+
+
+
+
+
+
+
+
+
+
+
 
