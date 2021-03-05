@@ -19,7 +19,8 @@ def main_menu():
 
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
-	await message.answer(text="Привет, я минибот.С Cлужу для того, чтобы добавлять товары в магазин @VapeLove_bot",reply_markup=main_menu)
+	await message.answer(text=f"Привет, я минибот.Cлужу для того, чтобы добавлять товары в магазин `VapeLove_bot`",
+	reply_markup=main_menu())
 
 
 
